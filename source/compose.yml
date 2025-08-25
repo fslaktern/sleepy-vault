@@ -1,0 +1,9 @@
+services:
+    sleepy-vault:
+        container_name: sleepy-vault
+        image: sleepy-vault
+        build: .
+        ports: ["20001:3000/tcp"]
+        restart: always
+        environment:
+            - "FLAG=fslaktern{test}"

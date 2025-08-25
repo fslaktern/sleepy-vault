@@ -1,0 +1,9 @@
+services:
+    {{ item.name }}:
+        container_name: {{ item.name }}
+        image: {{ item.name }}
+        build: .
+        ports: ["{{ item.port }}:3000/tcp"]
+        restart: always
+        environment:
+            - "FLAG={{ item.flag }}"
